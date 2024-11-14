@@ -1,0 +1,174 @@
+/* Reset and global styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    background: #fff; /* Matches body color */
+    color: #333; /* Adjusts text color */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Subtle separator */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Vertically aligns logo and nav */
+}
+
+header .logo img {
+    height: 50px; /* Adjust the size of the logo */
+    display: block;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between navigation links */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px; /* Clickable area */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #0056b3; /* Hover effect with primary color */
+}
+
+/* Hero section */
+#hero {
+    background: url('img/hero-image.webp') no-repeat center center/cover; /* Replace with your image */
+    color: #fff;
+    padding: 120px 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Add contrast to text */
+}
+
+#hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#hero .btn-primary {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Section styles */
+section {
+    padding: 50px 20px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#services .service {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Typography */
+h1, h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+p, a {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.service {
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    header .logo img {
+        height: 40px; /* Smaller logo for mobile */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start; /* Adjust navigation alignment */
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+}
+

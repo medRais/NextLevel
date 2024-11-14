@@ -54,34 +54,88 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #0056b3; /* Hover effect with primary color */
+    color: #434649; /* Hover effect with primary color */
 }
 
 /* Hero section */
 #hero {
-    background: url('img/hero-image.webp') no-repeat center center/cover; /* Replace with your image */
-    color: #fff;
-    padding: 120px 20px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Add contrast to text */
-}
-
-#hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-#hero p {
-    font-size: 18px;
+    position: relative;
+    background: url('img/hero-image.webp') center/cover no-repeat; /* Replace with your image path */
+    background-position: center; /* Adjust as needed */
+    height: 50vh; /* Smaller height for the hero section */
+    display: flex;
+    align-items: center; /* Aligns vertically to the center */
+    justify-content: flex-start; /* Aligns horizontally to the left */
+    padding-left: 10%; /* Adds space from the left edge */
+    color: #fff; /* White text */
+  }
+  
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+  }
+  
+  #hero .container {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+    text-align: left; /* Aligns text to the left */
+  }
+  
+  #hero h1 {
+    font-size: 2.5rem; /* Adjust font size for a smaller hero */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  #hero p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
-}
-
-#hero .btn-primary {
-    background: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  
+  #hero .btn-primary {
+    background-color: #46484b;
     color: #fff;
     padding: 10px 20px;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
-}
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #hero .btn-primary:hover {
+    background-color: #dee2e7;
+  }
+  .btn {
+    background-color: #7e8488; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Spacing inside the button */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Adds rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor for button */
+    text-decoration: none; /* Removes underline (if inherited) */
+    transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+    display: inline-block; /* Ensures the button behaves like a link */
+    text-align: center; /* Centers text inside the button */
+  }
+  
+  .btn:hover {
+    background-color: #60656b; /* Darker shade on hover */
+  }
+  
+  .btn:focus {
+    outline: none; /* Removes default focus outline */
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+  }
+  
 
 /* Section styles */
 section {

@@ -1,0 +1,90 @@
+/* Contact Section */
+#contacts {
+    background-color: var(--secondary-color);
+    padding: 5rem 0;
+}
+
+/* Contacts Container */
+#contacts .contacts {
+    display: flex; /* Flexbox for parallel columns */
+    flex-direction: column; /* Default to stacked on smaller screens */
+    gap: 3rem; /* Space between columns */
+}
+
+/* Contact Info */
+#contacts .contacts-info {
+    flex: 1; /* Equal width for columns */
+    text-align: left; /* Align text to the left */
+}
+
+/* Contact Form */
+#contacts .contacts-form {
+    flex: 1; /* Equal width for columns */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    max-width: 600px; /* Constrain form width */
+    background-color: #f9f9f9; /* Form background color for contrast */
+    padding: 2rem;
+    border-radius: 10px;
+   
+}
+
+/* Flexbox Alignment for Larger Screens */
+@media (min-width: 768px) {
+    #contacts .contacts {
+        flex-direction: row; /* Switch to parallel columns */
+        align-items: flex-start; /* Align items at the top */
+    }
+}
+
+/* Form Fields */
+#contacts .contacts-form-row {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    background-color: #ffffff; /* Matches section background */
+}
+
+#contacts .contacts-form-row:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Error Messages */
+#contacts .contacts-error-label {
+    font-size: 0.875rem;
+    color: #f44336;
+    margin-top: -0.625rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Submit Button */
+#contacts .btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contacts .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 767px) {
+    #contacts .contacts {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+}

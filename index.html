@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Level Code</title>
-    <link rel="stylesheet" href="styles.css">
+  <!-- Refactored CSS Files -->
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/services.css">
+    <link rel="stylesheet" href="styles/contacts.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="logo">
@@ -25,16 +32,17 @@
             </nav>
         </div>
     </header>
-    
 
+    <!-- Hero Section -->
     <section id="hero">
         <div class="container">
             <h1>Take Your Software to the Next Level</h1>
             <p>We build scalable, high-performance solutions for your business.</p>
-            <a href="#services" class="btn">Explore Services</a>
+            <button class="btn" onclick="location.href='#services'">Explore Services</button>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
@@ -42,40 +50,114 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services">
-        <h2>Our Services</h2>
-        <div class="services-container">
-          <div class="service-card">
-            <span class="material-icons">code</span> <!-- Icon -->
-            <h3>Custom Software Development</h3>
-            <p>Tailored solutions for your unique business needs, ensuring scalability and reliability.</p>
-          </div>
-          <div class="service-card">
-            <span class="material-icons">integration_instructions</span> <!-- Icon -->
-            <h3>Enterprise Integration</h3>
-            <p>Streamline your operations with cutting-edge integration technologies.</p>
-          </div>
-          <div class="service-card">
-            <span class="material-icons">phone_iphone</span> <!-- Icon -->
-            <h3>Web & Mobile App Development</h3>
-            <p>Build responsive, high-performance applications for a seamless user experience.</p>
-          </div>
-          <div class="service-card">
-            <span class="material-icons">autorenew</span> <!-- Icon -->
-            <h3>Digital Transformation</h3>
-            <p>Modernize your workflows and unlock efficiency with innovative solutions.</p>
-          </div>
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <!-- Service Cards -->
+                <div class="service-card">
+                    <span class="material-icons">code</span>
+                    <h3>Custom Software Development</h3>
+                    <p>Tailored solutions for your unique business needs, ensuring scalability and reliability.</p>
+                </div>
+                <div class="service-card">
+                    <span class="material-icons">integration_instructions</span>
+                    <h3>Enterprise Integration</h3>
+                    <p>Streamline your operations with cutting-edge integration technologies.</p>
+                </div>
+                <div class="service-card">
+                    <span class="material-icons">phone_iphone</span>
+                    <h3>Web & Mobile App Development</h3>
+                    <p>Build responsive, high-performance applications for a seamless user experience.</p>
+                </div>
+                <div class="service-card">
+                    <span class="material-icons">autorenew</span>
+                    <h3>Digital Transformation</h3>
+                    <p>Modernize your workflows and unlock efficiency with innovative solutions.</p>
+                </div>
+            </div>
+            <p class="services-note">
+                With over a decade of experience, we bring technical expertise and passion to every project, ensuring your success.
+            </p>
         </div>
-        <p class="services-note">
-            With over a decade of experience, we bring technical expertise and passion to every project, ensuring your success.
-          </p>
-      </section>
-      
+    </section>
 
+    <section id="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <p>Explore our recent projects and see the quality of our work.</p>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item">
+                    <img src="img/project1.webp" alt="Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Project Title 1</h3>
+                        <p>Brief description of the project.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/project2.webp" alt="Project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Project Title 2</h3>
+                        <p>Brief description of the project.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/project3.webp" alt="Project 3">
+                    <div class="portfolio-overlay">
+                        <h3>Project Title 3</h3>
+                        <p>Brief description of the project.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/project4.webp" alt="Project 4">
+                    <div class="portfolio-overlay">
+                        <h3>Project Title 4</h3>
+                        <p>Brief description of the project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contacts">
+        <div class="container">
+            <div class="contacts">
+                <!-- Contact Info -->
+                <div class="contacts-info">
+                    <h2>Get in touch</h2>
+                    <p>Always available for freelancing if the right project comes along. Feel free to contact me.</p>
+                    <ul>
+                        <li><span class="contacts-info-icon">📍</span>Paris, France</li>
+                        <li><span class="contacts-info-icon">✉️</span>rais.med.dev@gmail.com</li>
+                        <li><span class="contacts-info-icon">📞</span>+33 7 88 99 96 58</li>
+                    </ul>
+                </div>
+                <!-- Contact Form -->
+                <div class="contacts-form">
+                    <h2>Say Something</h2>
+                    <form id="contactForm">
+                        <input class="contacts-form-row" type="text" id="name" placeholder="Enter your name" />
+                        <span class="contacts-error-label" id="nameError">Name is required</span>
+                        <input class="contacts-form-row" type="email" id="email" placeholder="Enter your email" />
+                        <span class="contacts-error-label" id="emailError">Email is invalid</span>
+                        <textarea class="contacts-form-row" id="message" rows="4" placeholder="Enter your message"></textarea>
+                        <span class="contacts-error-label" id="messageError">Message is required</span>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Next Level Code. All rights reserved.</p>
         </div>
     </footer>
+    <script src="scripts/validation.js"></script>
 </body>
 </html>

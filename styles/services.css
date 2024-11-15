@@ -8,8 +8,8 @@
 #services h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
-  }
+    color: var(--text-color);
+}
 
 .services-container {
     display: grid;
@@ -42,12 +42,3 @@
     color: #555;
     line-height: 1.5;
 }
-
-.services-note {
-    margin-top: 30px;
-    font-size: 1.2rem;
-    color: #555; /* Adjust for readability */
-    line-height: 1.6;
-    text-align: center;
-    padding: 0 20px; /* Add some padding for smaller screens */
-  }

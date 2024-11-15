@@ -1,7 +1,8 @@
 /* Contact Section */
 #contacts {
     background-color: var(--secondary-color);
-    padding: 5rem 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 /* Contacts Container */
@@ -14,7 +15,10 @@
 /* Contact Info */
 #contacts .contacts-info {
     flex: 1; /* Equal width for columns */
+    display: flex;
+    flex-direction: column;
     text-align: left; /* Align text to the left */
+
 }
 
 /* Contact Form */
@@ -22,34 +26,50 @@
     flex: 1; /* Equal width for columns */
     display: flex;
     flex-direction: column;
-    align-items: left;
-    width: 100%;
-    max-width: 600px; /* Constrain form width */
-    background-color: #f9f9f9; /* Form background color for contrast */
-    padding: 2rem;
-    border-radius: 10px;
-   
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start; /* Align with the .contacts-info column */
+
 }
 
 /* Flexbox Alignment for Larger Screens */
 @media (min-width: 768px) {
     #contacts .contacts {
-        flex-direction: row; /* Switch to parallel columns */
-        align-items: flex-start; /* Align items at the top */
+        flex-direction: row; /* Align columns horizontally */
+        justify-content: space-between; /* Space evenly between columns */
+        align-items: flex-start; /* Align items at the top of the row */
     }
 }
 
 /* Form Fields */
-#contacts .contacts-form-row {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
+.contacts-form-row {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-family: inherit;
+    border-radius: 0.375rem;
     border: 1px solid var(--border-color);
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    background-color: var(--body-color);
     color: var(--text-color);
-    background-color: #ffffff; /* Matches section background */
-}
+    outline: none;
+    min-height: 3rem;
+  
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  
+    &:focus {
+      border: 1px solid var(--border-focus-color);
+    }
+  }
+
+  .contacts-info-icon {
+    vertical-align: middle;
+    fill: var(--primary-color);
+  }
+  
+  .contacts-info-icon-desc {
+    padding-left: 0.938rem;
+  }
+  
 
 #contacts .contacts-form-row:focus {
     border-color: var(--primary-color);
@@ -79,7 +99,7 @@
 }
 
 #contacts .btn:hover {
-    background-color: #0056b3;
+    background-color: var(--hover-color);
 }
 
 /* Responsive Adjustments for Smaller Screens */
@@ -87,4 +107,9 @@
     #contacts .contacts {
         flex-direction: column; /* Stack columns on smaller screens */
     }
+}
+
+#contacts h2 {
+    margin: 0; /* Remove any top/bottom margin for consistent alignment */
+    line-height: 1.2; /* Adjust line height if necessary */
 }

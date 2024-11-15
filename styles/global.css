@@ -7,8 +7,9 @@ body, h1, h2, h3, p, ul, li, a {
 
 /* Global Variables */
 :root {
-    --primary-color: #007bff;
+    --primary-color: #58555b;
     --secondary-color: #f8f9fa;
+    --hover-color: #796a89;
     --text-color: #333;
     --border-color: #ced4da;
     --border-focus-color: #80bdff;

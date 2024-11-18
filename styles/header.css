@@ -115,3 +115,44 @@ header nav ul li a:hover {
         display: block; /* Affiche le bouton */
     }
 }
+
+/* Bouton Retour en Haut */
+#backToTop {
+    display: none; /* Masqué par défaut */
+    position: fixed; /* Position fixe pour rester visible */
+    bottom: 20px; /* Distance depuis le bas de l'écran */
+    right: 20px; /* Distance depuis le bord droit */
+    background: rgba(51, 51, 51, 0.6); /* Fond sombre avec transparence */
+    color: #fff; /* Couleur de la flèche */
+    border: none;
+    border-radius: 50%; /* Forme de cercle */
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem; /* Taille de la flèche */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    z-index: 1000; /* Au-dessus des autres éléments */
+    display: flex;
+    justify-content: center; /* Centre la flèche horizontalement */
+    align-items: center; /* Centre la flèche verticalement */
+    transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8; /* Transparence initiale */
+}
+
+/* Survol */
+#backToTop:hover {
+    background: rgba(51, 51, 51, 0.7); /* Fond légèrement moins transparent au survol */
+    transform: scale(1.1); /* Légère mise en valeur */
+}
+
+/* Suppression des effets actifs */
+#backToTop:active {
+    background: rgba(51, 51, 51, 0.6); /* Garde le fond initial après un clic */
+    transform: scale(1); /* Retourne à la taille normale */
+}
+
+/* Suppression du focus visible */
+#backToTop:focus {
+    outline: none; /* Supprime le contour de focus */
+    box-shadow: none; /* Pas d'ombre au focus */
+}

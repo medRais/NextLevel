@@ -42,3 +42,10 @@
     color: #555;
     line-height: 1.5;
 }
+
+.services-note {
+    margin-bottom: 2rem; /* Ajoute un espacement sous le paragraphe */
+    text-align: center; /* Assure un alignement centré */
+    font-size: 1.1rem; /* Taille de texte plus lisible, si nécessaire */
+    color: #555; /* Couleur subtile pour le texte */
+}

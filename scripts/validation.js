@@ -1,34 +1,46 @@
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    let valid = true;
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Empêche le rechargement de la page
 
-    const name = document.getElementById('name');
-    const nameError = document.getElementById('nameError');
-    if (name.value.trim() === '') {
-        nameError.style.display = 'block';
-        valid = false;
+    // Sélection des champs
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    // Sélection des messages d'erreur
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const messageError = document.getElementById("messageError");
+
+    let isValid = true;
+
+    // Validation du champ Name
+    if (name.value.trim() === "") {
+        nameError.style.display = "block";
+        isValid = false;
     } else {
-        nameError.style.display = 'none';
+        nameError.style.display = "none";
     }
 
-    const email = document.getElementById('email');
-    const emailError = document.getElementById('emailError');
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email.value)) {
-        emailError.style.display = 'block';
-        valid = false;
+    // Validation du champ Email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple regex pour l'email
+    if (!emailPattern.test(email.value.trim())) {
+        emailError.style.display = "block";
+        isValid = false;
     } else {
-        emailError.style.display = 'none';
+        emailError.style.display = "none";
     }
 
-    const message = document.getElementById('message');
-    const messageError = document.getElementById('messageError');
-    if (message.value.trim() === '') {
-        messageError.style.display = 'block';
-        valid = false;
+    // Validation du champ Message
+    if (message.value.trim() === "") {
+        messageError.style.display = "block";
+        isValid = false;
     } else {
-        messageError.style.display = 'none';
+        messageError.style.display = "none";
     }
 
-    if (valid) {
-        alert('Message sent successfully
+    // Si tous les champs sont valides, envoyer le formulaire ou afficher un message de succès
+    if (isValid) {
+        alert("Message sent successfully!");
+        // Vous pouvez soumettre le formulaire ici, si nécessaire.
+    }
+});

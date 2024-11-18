@@ -1,6 +1,6 @@
 /* Contact Section */
 #contacts {
-    background-color: var(--secondary-color);
+   /* background-color: var(--secondary-color);*/
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -112,4 +112,15 @@
 #contacts h2 {
     margin: 0; /* Remove any top/bottom margin for consistent alignment */
     line-height: 1.2; /* Adjust line height if necessary */
+}
+
+.contacts ul {
+    list-style: none; /* Removes the bullet points */
+    margin: 0; /* Resets margin */
+    padding: 0; /* Resets padding */
+}
+.contacts ul li {
+    display: flex; /* Ensures the icon and text align properly */
+    align-items: center; /* Vertically aligns the icon and text */
+    margin-bottom: 1rem; /* Adds spacing between list items */
 }

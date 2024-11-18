@@ -6,6 +6,7 @@
     <title>Next Level Code</title>
   <!-- Refactored CSS Files -->
     <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/hero.css">
     <link rel="stylesheet" href="styles/services.css">
@@ -17,7 +18,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header>    
         <div class="container">
             <div class="logo">
                 <img src="img/NextLevel.png" alt="Next Level Code Logo" />
@@ -27,9 +28,12 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contacts">Contact</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
         </div>
     </header>
 
@@ -46,7 +50,19 @@
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>At Next Level Code, we specialize in creating tailored software solutions for businesses of all sizes. With expertise in web and mobile app development, we bring your ideas to life.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        At <strong>Next Level Code</strong>, we specialize in creating tailored software solutions for businesses of all sizes. With expertise in web and mobile app development, we bring your ideas to life with efficiency and scalability.
+                    </p>
+                    <ul>
+                        <li> Scalable web and mobile applications.</li>
+                        <li> Expertise in modern technologies like Java, Angular, and Spring.</li>
+                        <li> Over a decade of experience in multiple industries.</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -54,6 +70,9 @@
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
+            <p class="services-note">
+                With over a decade of experience, we bring technical expertise and passion to every project, ensuring your success.
+            </p>
             <div class="services-container">
                 <!-- Service Cards -->
                 <div class="service-card">
@@ -77,48 +96,66 @@
                     <p>Modernize your workflows and unlock efficiency with innovative solutions.</p>
                 </div>
             </div>
-            <p class="services-note">
-                With over a decade of experience, we bring technical expertise and passion to every project, ensuring your success.
-            </p>
+
         </div>
     </section>
 
     <section id="portfolio">
         <div class="container">
-            <h2>Our Portfolio</h2>
-            <p>Explore our recent projects and see the quality of our work.</p>
+            <h2>Projects</h2>
+            <p>Clients who trusted us..</p>
             <div class="portfolio-gallery">
+                <!-- Carte 1 -->
                 <div class="portfolio-item">
-                    <img src="img/project1.webp" alt="Project 1">
-                    <div class="portfolio-overlay">
-                        <h3>Project Title 1</h3>
-                        <p>Brief description of the project.</p>
+                    <img src="img/mailevaLogo-bg.png" alt="Project 1">
+                    <div class="portfolio-content">
+                        <p>The SMB Invoices solution came as a modern redesigned solution that offer the dematerialization and the processing of invoices between customers and suppliers, adapted to the needs of all organizations, VSE/SMEs and large groups..</p>
+                    </p>
                     </div>
                 </div>
+                <!-- Carte 2 -->
                 <div class="portfolio-item">
-                    <img src="img/project2.webp" alt="Project 2">
-                    <div class="portfolio-overlay">
-                        <h3>Project Title 2</h3>
-                        <p>Brief description of the project.</p>
+                    <img src="img/bnp.png" alt="Project 2">
+                    <div class="portfolio-content">
+                        <p>A secure, mobile-friendly application, enabling seamless integration with legacy and new systems without code changes on existing system. The solution features flexible data storage, event-driven processing, an embedded rule engine, and robust monitoring for optimal performance...</p>
+                    </p>
                     </div>
                 </div>
+                <!-- Carte 3 -->
                 <div class="portfolio-item">
-                    <img src="img/project3.webp" alt="Project 3">
-                    <div class="portfolio-overlay">
-                        <h3>Project Title 3</h3>
-                        <p>Brief description of the project.</p>
+                    <img src="img/ministere.png" alt="Project 3">
+                    <div class="portfolio-content">
+                        <p>AGHORA is an internal solution that offers management of human resources and administrative tasks within the ministry...</p>
                     </div>
                 </div>
+                <!-- Carte 4 -->
                 <div class="portfolio-item">
-                    <img src="img/project4.webp" alt="Project 4">
-                    <div class="portfolio-overlay">
-                        <h3>Project Title 4</h3>
-                        <p>Brief description of the project.</p>
+                    <img src="img/Banque_de_France.png" alt="Project 4">
+                    <div class="portfolio-content">
+                        <p>The FIBRE project is a portal designed to manage operational processes for Business and Individual Banking Files...</p>
+                    </div>
+                </div>
+                <!-- Carte 5 -->
+                <div class="portfolio-item">
+                    <img src="img/essilor.png" alt="Project 5">
+                    <div class="portfolio-content">
+                        <p>An E-commerce store generator that allows partner opticians of the Essilor brand to generate their own online
+                            stores that allow customers to order their glasses/glasses/lenses...</p>
+                    </div>
+                </div>
+                <!-- Carte 6 -->
+                <div class="portfolio-item">
+                    <img src="img/orange.png" alt="Project 6">
+                    <div class="portfolio-content">
+                        <p>CLIPER is a solution that centralizes customer data and ensures their homogenization while optimizing the
+                            design of its users data and contracts in the internal information system
+                            of Orange...</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     
 
     <!-- Contact Section -->
@@ -183,5 +220,12 @@
         </div>
     </footer>
     <script src="scripts/validation.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            const nav = document.querySelector('header nav');
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
+

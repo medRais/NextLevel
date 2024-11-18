@@ -23,6 +23,7 @@ header {
     color: #333; /* Adjusts text color */
     padding: 10px 0;
     border-bottom: 1px solid #ddd; /* Subtle separator */
+    position: relative; /* Important for positioning the nav */
 }
 
 header .container {
@@ -36,7 +37,7 @@ header .logo img {
     display: block;
 }
 
-
+/* Navigation desktop */
 header nav ul {
     list-style: none;
     display: flex;
@@ -57,18 +58,60 @@ header nav ul li a:hover {
     color: #434649; /* Hover effect with primary color */
 }
 
-/* Responsive Header */
+/* Bouton menu pour mobile */
+.menu-toggle {
+    display: none; /* Cacher le bouton sur desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Navigation mobile */
 @media (max-width: 768px) {
+    /* Taille du logo inchangée */
     header .logo img {
-        height: 40px;
+        height: 60px;
+    }
+
+    /* Navigation mobile masquée par défaut */
+    header nav {
+        display: none; /* Masquer la navigation */
+        position: absolute; /* Positionner par rapport au header */
+        top: 100%; /* Juste en dessous du header */
+        left: 0;
+        width: 100%;
+        background: #fff; /* Fond blanc pour le menu mobile */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+        z-index: 10; /* Assure que le menu est au-dessus des autres éléments */
+    }
+
+    /* Navigation mobile visible lorsqu'elle est active */
+    header nav.active {
+        display: block; /* Affiche la navigation */
     }
 
     header nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Navigation en colonne */
         align-items: flex-start;
+        gap: 0; /* Pas d'espace entre les éléments */
     }
 
     header nav ul li {
-        margin: 5px 0;
+        width: 100%;
+        text-align: left; /* Alignement à gauche */
+        margin: 0; /* Pas de marge */
+    }
+
+    header nav ul li a {
+        display: block;
+        width: 100%; /* Les liens prennent toute la largeur */
+        padding: 10px 15px;
+        border-bottom: 1px solid #ddd; /* Séparateurs entre les liens */
+    }
+
+    /* Bouton visible sur mobile */
+    .menu-toggle {
+        display: block; /* Affiche le bouton */
     }
 }

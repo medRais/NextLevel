@@ -120,7 +120,7 @@ header nav ul li a:hover {
 #backToTop {
     display: none; /* Masqué par défaut */
     position: fixed; /* Position fixe pour rester visible */
-    bottom: 20px; /* Distance depuis le bas de l'écran */
+    bottom: 90px; /* Distance depuis le bas de l'écran */
     right: 20px; /* Distance depuis le bord droit */
     background: rgba(51, 51, 51, 0.6); /* Fond sombre avec transparence */
     color: #fff; /* Couleur de la flèche */

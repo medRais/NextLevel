@@ -29,6 +29,7 @@
         justify-content: space-between; /* Space evenly between columns */
         align-items: flex-start; /* Align items at the top of the row */
     }
+    
 }
 
 
@@ -68,3 +69,6 @@
 .contacts p {
     margin-bottom: 20px;
 }
+
+
+

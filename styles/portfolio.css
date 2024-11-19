@@ -55,8 +55,8 @@
 
 /* Images des logos */
 .portfolio-item img {
-    max-width: 120px; /* Taille légèrement augmentée */
-    max-height: 120px; /* Taille légèrement augmentée */
+    max-width: 150px; /* Taille légèrement augmentée */
+    max-height: 150px; /* Taille légèrement augmentée */
     object-fit: contain; /* Maintient les proportions des logos */
     margin-bottom: 1rem; /* Espacement sous le logo */
     transition: transform 0.3s ease-in-out; /* Ajout d'une animation pour un effet subtil */

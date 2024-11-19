@@ -65,3 +65,6 @@
     align-items: center; /* Vertically aligns the icon and text */
     margin-bottom: 1rem; /* Adds spacing between list items */
 }
+.contacts p {
+    margin-bottom: 20px;
+}

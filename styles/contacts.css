@@ -29,7 +29,6 @@
         justify-content: space-between; /* Space evenly between columns */
         align-items: flex-start; /* Align items at the top of the row */
     }
-    
 }
 
 
@@ -48,6 +47,9 @@
 @media (max-width: 767px) {
     #contacts .contacts {
         flex-direction: column; /* Stack columns on smaller screens */
+    }
+    .whatsapp-label {
+        display: none; /* Cacher le bouton sur les écrans plus grands */
     }
 }
 
@@ -69,6 +71,3 @@
 .contacts p {
     margin-bottom: 20px;
 }
-
-
-

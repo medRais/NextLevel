@@ -57,6 +57,13 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.modern-tech {
+    font-weight: bold;
+    color: var(--heading-color);
+    position: relative;
+  }
+
+
 /* Responsive Design */
 @media (min-width: 768px) {
     .about-content {

@@ -38,7 +38,8 @@
     padding-left: 1.5rem;
 }
 
-.about-text ul li:before {
+/* Default bullet for top-level list items */
+.about-text > ul > li:before {
     content: "✔";
     color: var(--primary-color);
     position: absolute;
@@ -46,6 +47,48 @@
     font-size: 1rem;
 }
 
+/* Sub-list item styles */
+.about-text ul.sub-list > li, .about-text ul.industries-sub-list > li {
+    position: relative;
+    padding-left: 1.5rem; /* Indent to align with the hyphen */
+}
+
+.about-text ul.sub-list > li:before, .about-text ul.industries-sub-list > li:before {
+    content: "-"; /* Display hyphen for sub-list items */
+    color: inherit; /* Use text color */
+    position: absolute; /* Align the hyphen */
+    left: 0; /* Position at the start of the list item */
+    font-size: 1rem; /* Ensure consistent font size */
+}
+
+/* Sub-list general styling */
+.about-text ul.sub-list, .about-text ul.industries-sub-list {
+    list-style-type: none; /* Remove default browser bullets */
+    padding-left: 20px; /* Ensure proper indentation */
+}
+
+.sub-list, .industries-sub-list {
+    column-count: 3; /* Split into 2 columns */
+    column-gap: 20px; /* Add spacing between columns */
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+}
+
+.sub-list li, .industries-sub-list.li {
+    break-inside: avoid; /* Prevent items from breaking across columns */
+    padding-left: 1rem; /* Add space for custom bullets */
+    position: relative; /* Enable use of pseudo-elements */
+}
+
+.sub-list li:before, .industries-sub-list li:before {
+    content: "-"; /* Custom bullet */
+    position: absolute;
+    left: 0;
+    color: var(--primary-color); /* Optional: Match your theme */
+}
+
+
+/* Styling for the image */
 .about-image {
     flex: 1;
     max-width: 500px;
@@ -61,8 +104,7 @@
     font-weight: bold;
     color: var(--heading-color);
     position: relative;
-  }
-
+}
 
 /* Responsive Design */
 @media (min-width: 768px) {

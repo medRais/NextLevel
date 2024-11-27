@@ -67,11 +67,14 @@
     padding-left: 20px; /* Ensure proper indentation */
 }
 
-.sub-list, .industries-sub-list {
-    column-count: 3; /* Split into 2 columns */
-    column-gap: 20px; /* Add spacing between columns */
+.sub-list,
+.industries-sub-list {
+    display: grid; /* Use grid for columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    gap: 10px; /* Space between items */
     list-style-type: none; /* Remove default bullets */
-    padding-left: 0; /* Remove default padding */
+    padding-left: 0;
+    margin: 0; /* Remove margins */
 }
 
 .sub-list li, .industries-sub-list.li {
@@ -111,5 +114,18 @@
     .about-content {
         flex-direction: row;
         align-items: flex-start;
+    }
+}
+@media (max-width: 768px) {
+    .sub-list,
+    .industries-sub-list {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .sub-list,
+    .industries-sub-list {
+        grid-template-columns: 1fr; /* Switch to 1 column */
     }
 }

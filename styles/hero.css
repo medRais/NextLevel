@@ -3,7 +3,7 @@
     position: relative;
     background: url('../img/hero-image.webp') center/cover no-repeat; /* Replace with your image path */
     background-position: center; /* Adjust as needed */
-    height: 50vh; /* Smaller height for the hero section */
+    height: 70vh; /* Smaller height for the hero section */
     display: flex;
     align-items: center; /* Aligns vertically to the center */
     justify-content: flex-start; /* Aligns horizontally to the left */
